@@ -13,5 +13,5 @@ for theme in *.terminal; do
 done
 cd $cwd
 
-defaults write com.apple.Terminal "Default Window Settings" -string "tango-dark"
-defaults write com.apple.Terminal "Startup Window Settings" -string "tango-dark"
+defaults write com.apple.Terminal "Default Window Settings" -string "Dracula"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Dracula"
