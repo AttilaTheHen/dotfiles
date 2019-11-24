@@ -74,6 +74,15 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Disable "natural" (Lion-style) scrolling
 # defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
+# Enable tap-to-click
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Enable tap-to-click on login screen
+sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1
+
+# Enable three-finger-drag
+defaults write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
