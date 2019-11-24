@@ -1,4 +1,5 @@
 # .files
-It just works. Sometimes.
+It just works. Sometimes. Work in progress!
 
-Work in progress!
+## Acknowledgements
+Special thanks to Ryan Kilby for letting me get started by looking at his [dotfiles](https://github.com/rpkilby/dotfiles).
