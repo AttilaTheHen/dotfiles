@@ -1,0 +1,43 @@
+cask_args appdir: '/Applications'
+
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+# Install GNU utilities
+brew 'coreutils'
+brew 'moreutils'
+brew 'findutils'
+brew 'bash-completion'
+
+# brew 'direnv'
+brew 'git'
+brew 'wget'
+# brew 'dos2unix'
+brew 'sshrc'
+# brew 'pandoc'
+# brew 'pstree'
+# brew 'tree'
+# brew 'nmap'
+brew 'imagemagick'
+# brew 'spaceman-diff'
+# brew 'readline'
+brew 'openssl'
+brew 'yarn'
+brew 'nvm'
+
+brew 'python'
+brew 'postgresql'
+brew 'redis'
+# note - use the "docker for mac" cask
+brew 'docker-compose'
+# brew 'circleci'
+
+# install user applications
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'docker'
+cask 'firefox'
+cask 'mactracker'
+cask 'slack'
+cask 'amethyst'
+cask 'visual-studio-code'

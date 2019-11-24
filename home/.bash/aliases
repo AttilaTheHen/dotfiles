@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+# Best ls
+alias ls="gls -lh --color=auto --group-directories-first"
+
+# Now with hidden files
+alias la="ls -A"
+
+alias boop="touch"
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Show/hide hidden files in Finder
+alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidehiddenfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
+# (useful when executing time-consuming commands)
+alias notify="tput bel"
+
+# Intuitive map function
+# For example, to list all directories that contain a certain file:
+# find . -name .gitattributes | map dirname
+alias map="xargs -n1"
+
+# One of @janmoesen’s ProTip™s
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+    alias "$method"="lwp-request -m '$method'"
+done
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Rain or shine
+alias weather='open https://darksky.net'
+
+# Bash/Zsh and dir commands
+alias bp="code ~/.bash_profile"
+alias zr="code ~/.zshrc"
+alias rb="source ~/.bash_profile"
+alias rz="source ~/.zshrc"
+
+# System commands
+alias zzz="pmset displaysleepnow"  # Just for touchbar Macs
+
+# Git commands
+alias gcl="git clone"
+alias gl="git log"
+alias gs="git status"
+alias ga="git add -A"
+alias gco="git commit -m"
+alias gp="git push"
+alias gpl="git pull"
+alias gb="git branch"
+alias gnb="git checkout -b"
+alias gch="git checkout"
+__git_complete gch _git_checkout # Add branch tab completion
+alias gm="git merge"
+alias gac="git add -A && git commit -m"
+alias gst="git stash"
+alias gstl="git stash list"
+alias gsp="git stash pop"
+
+# Docker commands
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+alias dcp="docker-compose ps"
+alias dck="docker-compose kill"
+alias dcr="docker-compose rm"
+alias dil="docker image ls"
+alias dip="docker image prune"

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+if [ -f $(brew --prefix coreutils)/libexec/gnubin ]; then
+    export PATH="`$(brew --prefix coreutils)/libexec/gnubin`:$PATH"
+fi
+if [ -f $(brew --prefix findutils)/libexec/gnubin ]; then
+    export PATH="`$(brew --prefix findutils)/libexec/gnubin`:$PATH"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="~/.bash/bin:$PATH"

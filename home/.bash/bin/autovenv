@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+function usage() {
+    cat <<EOF
+Usage: ${0##*/} [OPTIONS] [DEST]
+Create stub autoenv's that will automatically activate/deactivate python virtualenv's.
+A "base" autoenv should be created in your main project directory, and will deactivate
+virtualenvs upon navigation. Regular autoenv's should be created in project directories
+and will activate their associated virtualenv.
+
+    -h, --help              Display this help and exit
+    -b, --base              Creates a base env at DEST that will automatically deactivate
+                            virtualenvs. The -v option will have no effect.
+    -v, --venv VENV_DIR     Set the directory of the virtualenv (defaults to ".venv")
+    [DEST]                  Destination of the autoenv file (defaults to ".env")
+
+
+Scripts are based on Rob Smith's work:
+https://www.kormoc.com/2014/03/22/autoenv-and-virtualenv/
+EOF
+}
+
+# Initialize variables
+DEST=".env"
+VENV_DIR=".venv"
+BASE=false
+
+# Parse options
+while [[ $# -gt 0 ]]; do
+    key="$1"
+
+    case $key in
+        -h|--help)
+            usage
+            exit 0
+            ;;
+
+        -b|--base)
+            BASE=true
+            shift # past argument
+            ;;
+
+        -v|--venv)
+            VENV_DIR="$2"
+            shift 2 # past arguments
+            ;;
+
+        *)
+            DEST=$key
+            shift # past argument
+    esac
+done
+
+
+if [[ $BASE == true ]]; then
+    # Write base env to DEST
+    cat > $DEST <<EOF
+BASE_PATH=\`dirname "\${BASH_SOURCE}"\`
+PWD=\`pwd\`
+
+if [[ "\${BASE_PATH}" == "\${PWD}" ]]
+then
+    declare -f -F deactivate &>/dev/null
+
+    if [[ "\${?}" == "0" ]]
+    then
+        deactivate
+    fi
+fi
+EOF
+exit
+fi
+
+
+# Write default env to DEST
+cat > $DEST <<EOF
+BASE_PATH=\`dirname "\${BASH_SOURCE}"\`
+PWD=\`pwd\`
+
+if [[ "\${BASE_PATH}" == "\${PWD}" ]]; then
+    if [[ -e ${VENV_DIR}/bin/activate ]]; then
+        source ${VENV_DIR}/bin/activate
+    fi
+fi
+EOF
