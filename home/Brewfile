@@ -1,7 +1,8 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
-tap 'caskroom/versions'
+# caskroom/cask and caskroom/versions are outdated?
+# tap 'caskroom/cask'
+# tap 'caskroom/versions'
 
 # Install GNU utilities
 brew 'coreutils'

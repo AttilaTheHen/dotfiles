@@ -79,7 +79,6 @@ alias gpl="git pull"
 alias gb="git branch"
 alias gnb="git checkout -b"
 alias gch="git checkout"
-__git_complete gch _git_checkout # Add branch tab completion
 alias gm="git merge"
 alias gac="git add -A && git commit -m"
 alias gst="git stash"
