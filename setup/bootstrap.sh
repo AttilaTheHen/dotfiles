@@ -10,3 +10,4 @@ bash $(dirname $BASH_SOURCE)/applications.sh
 bash $(dirname $BASH_SOURCE)/macos.sh
 # bash $(dirname $BASH_SOURCE)/sublime.sh
 bash $(dirname $BASH_SOURCE)/terminal.sh
+bash $(dirname $BASH_SOURCE)/node.sh
