@@ -34,7 +34,8 @@ brew 'docker-compose'
 
 # install user applications
 cask 'google-chrome'
-cask 'google-chrome-canary'
+# Can't find google-chrome-canary
+# cask 'google-chrome-canary'
 cask 'docker'
 cask 'firefox'
 cask 'mactracker'
