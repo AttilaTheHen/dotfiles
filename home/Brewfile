@@ -1,7 +1,8 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/cask-cask'
-tap 'homebrew/cask-versions'
+# Not sure if these are necessary anymore...
+# tap 'homebrew/cask-cask'
+# tap 'homebrew/cask-versions'
 
 # Install GNU utilities
 brew 'coreutils'
