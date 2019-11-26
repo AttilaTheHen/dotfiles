@@ -24,7 +24,6 @@ brew 'imagemagick'
 # brew 'readline'
 brew 'openssl'
 brew 'yarn'
-brew 'nvm'
 
 brew 'python'
 brew 'postgresql'
