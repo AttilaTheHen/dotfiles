@@ -149,7 +149,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     Privileges -bool true
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock, Dashboard, and hot corners/menu bar                                   #
 ###############################################################################
 
 # Set the dock orientation to the left side of the screen
@@ -181,6 +181,11 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
+
+# Enable Bluetooth and Volume on menubar
+defaults write com.apple.systemuiserver menuExtras -array
+"/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+"/System/Library/CoreServices/Menu Extras/Volume.menu" 
 
 # Hot corners
 # Possible values:
