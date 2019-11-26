@@ -183,9 +183,7 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Enable Bluetooth and Volume on menubar
-defaults write com.apple.systemuiserver menuExtras -array
-"/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
-"/System/Library/CoreServices/Menu Extras/Volume.menu" 
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" 
 
 # Hot corners
 # Possible values:
