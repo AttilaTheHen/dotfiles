@@ -16,5 +16,5 @@ else
 fi
 
 info "› Updating homebrew applications..."
-cd && brew bundle
+cd && brew bundle  # always run the Brewfile in the home dir
 brew bundle cleanup
