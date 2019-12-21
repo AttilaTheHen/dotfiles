@@ -16,5 +16,5 @@ else
 fi
 
 info "› Updating homebrew applications..."
-brew bundle
+cd && brew bundle
 brew bundle cleanup
