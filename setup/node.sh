@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Enable nvm
-source /usr/local/opt/nvm/nvm.sh
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
 # Install node via nvm, then check to make sure it's the right version
 nvm install node
