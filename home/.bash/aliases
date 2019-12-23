@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Add bash completion for git and a ton of other commands
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+fi
+
 # Best ls
 alias ls="gls -lh --color=auto --group-directories-first"
 

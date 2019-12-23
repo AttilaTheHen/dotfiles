@@ -16,12 +16,6 @@ shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-
-# Add bash completion for git and a ton of other commands
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
-fi
-
 # Install direnv hook
 if which direnv &> /dev/null; then
     eval "$(direnv hook bash)"
