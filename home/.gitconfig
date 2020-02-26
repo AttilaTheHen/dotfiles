@@ -6,7 +6,7 @@
     ui = auto
 
 [core]
-	editor = vim
+	editor = code --wait
     excludesfile = /Users/injoongyoon/.gitignore-global
 
 [diff]
