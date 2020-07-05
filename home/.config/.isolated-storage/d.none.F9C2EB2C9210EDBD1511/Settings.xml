@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectHistory>
+    <string>/Users/injoongyoon/dev/ExampleGame/ExampleGame/Content/Content.mgcb</string>
+  </ProjectHistory>
+  <StartupProject>/Users/injoongyoon/dev/ExampleGame/ExampleGame/Content/Content.mgcb</StartupProject>
+  <Size>
+    <X>0</X>
+    <Y>0</Y>
+  </Size>
+  <HSeparator>0</HSeparator>
+  <VSeparator>0</VSeparator>
+  <Maximized>false</Maximized>
+  <DebugMode>false</DebugMode>
+  <PropertyGroupSort>true</PropertyGroupSort>
+  <FilterOutput>true</FilterOutput>
+  <FilterShowSkipped>true</FilterShowSkipped>
+  <FilterShowSuccessful>true</FilterShowSuccessful>
+  <FilterShowCleaned>true</FilterShowCleaned>
+  <AutoScrollBuildOutput>true</AutoScrollBuildOutput>
+</PipelineSettings>
