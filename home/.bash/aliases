@@ -99,3 +99,10 @@ alias dck="docker-compose kill"
 alias dcr="docker-compose rm"
 alias dil="docker image ls"
 alias dip="docker image prune"
+
+# Restarting a specific container (say, after a new package has been added to a container) - modified from here: https://stackoverflow.com/a/36885311/7465749
+# docker-compose ps # lists all services (id, name)
+# docker-compose kill # just stop all containers
+# docker-compose rm <id/name> # this will remove the docker container permanently 
+# docker-compose build <id/name> # this will rebuild the docker container and install the new packages
+# docker-compose up # builds/rebuilds all not already built container
