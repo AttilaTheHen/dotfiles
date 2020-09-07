@@ -69,8 +69,9 @@ alias bp="code ~/.bash_profile"
 alias zr="code ~/.zshrc"
 alias rb="source ~/.bash_profile"
 alias rz="source ~/.zshrc"
+alias dev="cd ~/dev"
 
-# System commands
+# Put just the display to sleep
 alias zzz="pmset displaysleepnow"  # Just for touchbar Macs
 
 # Git commands
