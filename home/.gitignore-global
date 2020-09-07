@@ -11,3 +11,5 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# Project-specific settings for VSCode
+.vscode
