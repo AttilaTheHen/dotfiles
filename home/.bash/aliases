@@ -102,9 +102,18 @@ alias dcr="docker-compose rm"
 alias dil="docker image ls"
 alias dip="docker image prune"
 
-# Restarting a specific container (say, after a new package has been added to a container) - modified from here: https://stackoverflow.com/a/36885311/7465749
-# docker-compose ps # lists all services (id, name)
-# docker-compose kill # just stop all containers
-# docker-compose rm <id/name> # this will remove the docker container permanently 
-# docker-compose build <id/name> # this will rebuild the docker container and install the new packages
-# docker-compose up # builds/rebuilds all not already built container
+#  Restarting a specific container (say, after a new package has been added to a container) - 
+#  modified from here: https://stackoverflow.com/a/36885311/7465749
+#    1. docker-compose ps # lists all services (id, name)
+#    2. docker-compose kill # just stop all containers
+#    3. docker-compose rm <id/name> # this will remove the docker container permanently 
+#    4. docker-compose build <id/name> # this will rebuild the docker container and install the new
+#       packages
+#    5. docker-compose up # builds/rebuilds all not already built container
+#  
+#  NOTE: the id/name here is the name of the container - docker-compose bases the project name on
+#  the basename of the directory compose commands are run from, stated in docker-compose issue #745
+#  (https://github.com/docker/compose/issues/745). So, by default, you'll probably see some sort of
+#  ouput like <dirname>_<container-name>_<instance-number>. The container-name is what you need to
+#  input in the above commands - you don't need anything else. Helpful SO post:
+#  https://stackoverflow.com/questions/33045358/docker-compose-image-named-prefix-s-1-instead-of-s
