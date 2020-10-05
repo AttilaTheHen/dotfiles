@@ -6,14 +6,14 @@
     ui = auto
 
 [core]
-	editor = code --wait
+	editor = nova --wait
     excludesfile = /Users/injoongyoon/.gitignore-global
 
 [diff]
     tool = default-difftool
 
 [difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+    cmd = nova --wait --diff $LOCAL $REMOTE
 
 [log]
     date = relative

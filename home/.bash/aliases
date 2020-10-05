@@ -65,12 +65,12 @@ alias path='echo -e ${PATH//:/\\n}'
 alias weather='open https://darksky.net'
 
 # Bash/Zsh and dir commands
-alias bp="code ~/.bash_profile"
-alias zr="code ~/.zshrc"
+alias bp="nova ~/.bash_profile"
+alias zr="nova ~/.zshrc"
 alias rb="source ~/.bash_profile"
 alias rz="source ~/.zshrc"
 alias dev="cd ~/dev"
-alias dot="cd ~/dev/dotfiles && code ."
+alias dot="cd ~/dev/dotfiles && nova ."
 
 # Put just the display to sleep
 alias zzz="pmset displaysleepnow"  # Just for touchbar Macs
