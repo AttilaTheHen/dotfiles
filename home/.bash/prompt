@@ -40,3 +40,4 @@ set_prompt() {
 
 export PROMPT_COMMAND="set_prompt; $PROMPT_COMMAND"
 export PS1="$(dir_name)$(git_dirty)$(need_push)› "
+
