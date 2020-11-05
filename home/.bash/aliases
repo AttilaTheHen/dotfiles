@@ -76,6 +76,7 @@ alias zzz="pmset displaysleepnow"  # Just for touchbar Macs
 # Git commands
 alias gcl="git clone"
 alias gl="git log"
+alias glf="git log --format=full"
 alias gs="git status"
 alias ga="git add -A"
 alias gco="git commit -m"
