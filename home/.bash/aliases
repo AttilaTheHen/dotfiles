@@ -116,3 +116,15 @@ alias dip="docker image prune"
 #  ouput like <dirname>_<container-name>_<instance-number>. The container-name is what you need to
 #  input in the above commands - you don't need anything else. Helpful SO post:
 #  https://stackoverflow.com/questions/33045358/docker-compose-image-named-prefix-s-1-instead-of-s
+
+#  If you run into a Postgres issue with docker-compose, along the lines of an error that reads
+#  "The data directory was initialized by PostgreSQL version X, which is not compatible with
+#  this version Y", this is an issue with the VOLUME (something I still need to better understand).
+#  To fix this issue:
+#    1. docker-compose kill # stop all containers
+#    2. docker-compose ps # list all the services that are running, and find your DB service
+#    3. docker-compose rm <id/name> # remove the specific DB service
+#    4. docker volume ls # list all the volumes on your machine, and locate your DB volume (hopefully
+#       named something similar to your service)
+#    5. docker volume rm <name> # remove the DB volume
+#  More info here: https://stackoverflow.com/a/58146616/7465749
