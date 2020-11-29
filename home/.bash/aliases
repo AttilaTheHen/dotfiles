@@ -73,6 +73,9 @@ alias dot="nova ~/dev/dotfiles"
 # Put just the display to sleep
 alias zzz="pmset displaysleepnow"  # Just for touchbar Macs
 
+# Run benchmark for Bash prompt
+alias bench="__bashrc_bench=1 bash ~/dev/dotfiles/terminal/benchmark.sh"
+
 # Git commands
 alias gcl="git clone"
 alias gl="git log"
