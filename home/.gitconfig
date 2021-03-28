@@ -26,3 +26,4 @@
 
 [pull]
     rebase = false
+	ff = true
