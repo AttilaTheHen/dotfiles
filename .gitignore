@@ -8,5 +8,5 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# configstore
-home/.config/configstore
+# config
+home/.config
